@@ -1,0 +1,7 @@
+---
+app_user: appsvc
+app_dir: /opt/webapp
+web_port: 8088
+web_image: nginx:alpine
+web_container: webstack-web
+web_packages: git,cron

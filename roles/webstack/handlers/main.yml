@@ -1,0 +1,7 @@
+---
+- name: restart web container
+  community.docker.docker_container:
+    name: "{{ web_container }}"
+    state: started
+    restart: true
+  delegate_to: localhost

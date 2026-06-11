@@ -1,0 +1,8 @@
+galaxy_info:
+  author: Aviv
+  description: sets up a host for a small containerized web service
+  license: MIT
+  min_ansible_version: "2.14"
+  galaxy_tags: []
+
+dependencies: []
