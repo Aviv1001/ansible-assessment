@@ -21,5 +21,4 @@ Needs ansible-core 2.14+, `ansible-galaxy collection install community.docker`, 
 
 ## Idempotency & limitations
 
-- 2nd run is changed=0 (changed_when: false on the version check, stat guard on the marker)
 - no systemd/docker in the target container -> cron via sysv fallback; nginx serves its default page
