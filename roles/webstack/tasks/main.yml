@@ -14,11 +14,7 @@
       notify: restart web container
     - stat: path={{ app_dir }}/.deployed
       register: marker
-    - command: git --version
-      register: git_ver
       changed_when: false
-    - shell: date -u > {{ app_dir }}/.deployed
-      when: not marker.stat.exists
     - service: name=cron state=started enabled=yes
     - community.docker.docker_container: name={{ web_container }} image=nginx:alpine ports=127.0.0.1:{{ web_port }}:80
       delegate_to: localhost
